@@ -1,43 +1,4 @@
-// let words=document.querySelectorAll(".word");
-// words.forEach((word)=>
-// {
-//     let letters =word.textContent.split("");
-//     word.textContent="";
-//     letters.forEach((letter)=>{
-//         let span=document.createElement("span");
-//         span.textContent = letter;
-//         span.className="letter";
-//         word.append(span);
 
-//     });
-// });
-
-// let currrentWordIndex=0;
-// let maxWordIndex= words.length-1;
-// words[currrentWordIndex].style.opacity="0";
-// let changetext=()=>
-// {
-//     let currentword=words[currrentWordIndex];
-//     let nextword=currrentWordIndex === maxWordIndex ?words[0]:words[currrentWordIndex + 1];
-//     Array.from(currentword.children).forEach((letter,i)=>{
-//         setTimeout(()=>
-//         {
-//             letter.className="letter out";
-//         },i * 80);
-//     });
-//     nextword.style.opacity="1";
-//     Array.from(nextword.children).forEach((letter,i)=>
-//     {
-//         letter.className="letter behind";
-//         setTimeout(()=>
-//         {
-//             letter.className="letter in";
-//         },340 + i * 80)
-//     });
-//     currrentWordIndex=currrentWordIndex === maxWordIndex? 0:currrentWordIndex + 1;
-// };
-// changetext();
-// setInterval(changetext,300);
 
 const text=document.querySelector(".second-text");
 const textload=()=>{
@@ -107,35 +68,6 @@ const header=document.querySelector("header");
 window.addEventListener("scroll",function(){
     header.classList.toggle("sticky",this.window.scrollY >50)
 })
-//toggle icon navbar///////////////////////////////////////////
-
-// let menuicon=document.querySelector("#menu-icon");
-// let navlist=document.querySelector(".navlist");
-
-// menuicon.onclick = ()=>{
-//     menuicon.classList.toggle("bx-x");
-//     navlist.classList.toggle("open");
-// };
-
-
-
-// window.onscroll = ()=>
-// {
-//     menuicon.classList.remove("bx-x");
-//     navlist.classList.remove("open");
-
-// };
-
-
-
-
-// window.onscroll = ()=>
-// {
-//     document.getElementById("menu-icon").classList.remove("bx-x");
-//     document.getElementsByClassName("navlist").classList.remove("open");
-
-// };
-
 //another code for toggle///////////////////////////////////////////////////////////////////////////////////////
 
 
