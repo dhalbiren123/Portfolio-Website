@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
 }
-:root{
+:root{ 
     --text-color: #f5f5f5;
     --hover-color:#12f7ff;
     --bg-color:#250821;
@@ -42,6 +42,7 @@ body{
     font-family: "poppins",sans-serif;
     background-color: var(--bg-color);
     color:var(--text-color);
+	overflow-X:hidden
 }
 header{
     position: fixed;
@@ -102,7 +103,7 @@ span{
 
 }
 #menu_icon{
-    font-size: 1.8rem;
+    font-size: 10px;
     z-index: 1000;
     cursor: pointer;
     background: var(--hover-color);
@@ -134,10 +135,11 @@ section{
 
 }
 
-.container{
+    .container{
     width:400px;
     overflow: hidden;
     }
+
     .container .text{
         position: relative;
         color: #4070f4;
@@ -472,7 +474,6 @@ transform: translateY(.7rem);
 }
 .skill-bar{
     margin-bottom: 2.3rem;
-
 }
 .skill-main h3{
     margin-bottom: 2rem;
@@ -510,26 +511,37 @@ transform: translateY(.7rem);
     width:80% ;
     animation: css 3s;
 }
-.skill-bar .bar .JavaScript
+.skill-bar .bar .wordpress
 {
-    width: 65%;
-    animation: JavaScript 4s;
+    width: 80%;
+    animation: wordpress 11s;
 }
 .skill-bar .bar .MySql
 {
     width: 75%;
     animation: MySql 5s;
 }
-.skill-bar .bar .REACT
+.skill-bar .bar .Boot 
 {
-    width: 60%;
-    animation: REACT 6s;
+    width: 70%;
+    animation: Boot 6s;
+}
+.skill-bar .bar .JavaScript
+{
+    width: 65%;
+    animation: JavaScript 4s;
 }
 .skill-bar .bar .PHP
 {
     width: 50%;
     animation: PHP 7s;
 }
+.skill-bar .bar .react
+{
+    width: 60%;
+    animation: react 9s;
+}
+
 /* skill right--------------------------------------------------------------------- */
 .professional{
     display: grid;
@@ -727,7 +739,7 @@ transform: translateY(.7rem);
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
    
     gap: 1rem;
-    height: 600px; 
+    height: auto; 
     
 }
 .port-box{
@@ -739,7 +751,7 @@ transform: translateY(.7rem);
     border-radius: 15px;
     overflow: hidden;
     display: flex;
-    grid-template-rows: 1fr auto;
+    /* grid-template-rows: 1fr auto; */
     align-items: center;
     border: 2px solid var(--hover-color);
     box-shadow: var(--neon-box-shadow);
@@ -767,7 +779,7 @@ transform: translateY(.7rem);
     justify-content: center;*/
     opacity: .5s;
     transition: .5s;
-     width: 100%;
+    width: 100%;
 }
 .port-content{
     position: absolute;
@@ -776,8 +788,6 @@ transform: translateY(.7rem);
     width: 100%;
     height: 100%;
     opacity: 0;
-
-
     background: linear-gradient(rgba(0,0,0,.2),#12f7ff);
     display: flex;
     align-items: center;
@@ -807,6 +817,8 @@ font-weight:600 ;
     height: 50px;
     border: 1px solid var(--hover-color);
     outline: 2px solid #fff;
+    margin: 0px 0 15px 0;
+    padding: 5px;
 }
 .port-content a i{
     font-size: 1.3rem;
@@ -1028,6 +1040,7 @@ footer a i{
     @media (max-width:768px){
         #menu_icon
         {
+            font-size: 28px;
             display: block;
             transition: all .4s ease;
         }
@@ -1037,8 +1050,9 @@ footer a i{
         }
         .navlist{
             /* display: flex; */
+            display: none;
             position: absolute;
-            top: -1000px;
+            top: 0px;
             right: 0;
             left: 0;
             flex-direction: column;
@@ -1046,6 +1060,9 @@ footer a i{
             text-align: left;
             padding: 0 5%;
             transition: all .45s ease;
+        }
+        .navlist.active{
+            display: flex;
         }
         .navlist a{
             display: block;
@@ -1112,7 +1129,8 @@ footer a i{
             font-size: 1rem;
         }
         .img-about img{
-            width: 350px;
+            /* width: 350px; */
+            width: 100%;
         }
         .info-about1,.info-about2{
             display: none;
@@ -1124,3 +1142,104 @@ footer a i{
 
     }
        
+@media screen and (min) {
+  header .navlist {
+    display: none;
+  }
+  header .navlist.active {
+    display: block;
+  }
+  .home-content h1 {
+    font-size: 2rem;
+  }
+  /* Adjusting sections for mobile view */
+  .skill-main {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width:767px){
+
+body{
+	/* background:red; */
+	overflow-X:hidden!important;
+}
+.container{
+	width:320px;
+	margin:0 auto;
+}
+.skill-main{
+    display:block;
+}
+.professional 
+{
+    display: unset;
+}
+.port-image{
+    position: absolute;
+}
+}
+
+/* Type Writing Css */
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+    /* min-width: 380px; */
+    /* width: auto; */
+    width: 100%!important;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Web Developer";
+    color: #12F7FF;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #250821;
+    border-left: 2px solid #12F7FF;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #250821;
+    }
+    
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Web Developer";
+    }
+    21%,40%{
+        content: "frontendDeveloper";
+    }
+    41%,60%{
+        content: "ui/ux developer";
+    }
+    61%,80%{
+        content: "GraphicsDesigner";
+    }
+    /* 81%,100%{
+        content: "Youtuber";
+    } */
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}

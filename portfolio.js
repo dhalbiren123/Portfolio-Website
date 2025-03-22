@@ -5,7 +5,7 @@ const textload=()=>{
     setTimeout(()=>
     {
         text.textContent="Youtuber";
-    },0);
+    },0); 
     setTimeout(()=>
     {
         text.textContent="Software Developer";
@@ -75,6 +75,9 @@ function clickmenu(){
     document.getElementById("menu_icon").classList.toggle("bx-x");
     document.getElementById("navlist").classList.toggle("open");
 }
+
+
+
 // Onclickmenu();
 
 
@@ -130,3 +133,14 @@ for(var i = 1;
     }
     }
     NumberCounter();
+	
+	
+	
+// 	function clickmenu() {
+//     let navList = document.getElementById('navlist');
+//     navList.classList.toggle('active'); // Ensure your CSS has a class '.active' that shows the menu on small screens
+// }
+
+function clickmenu() {
+    document.getElementById("navlist").classList.toggle("active");
+}
