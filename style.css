@@ -299,6 +299,7 @@ section{
     .home-image
     {
         position: relative;
+		margin-bottom: -176px;
 
     }
     .image-box
